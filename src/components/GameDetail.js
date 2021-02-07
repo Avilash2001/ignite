@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import {motion} from 'framer-motion';
 //Redux
 import {useDispatch,useSelector}from 'react-redux';
+//Image Resizer
+import { smallImage } from "../util";
 
 const GameDetail =()=>{
     const history = useHistory();
@@ -43,7 +45,7 @@ const GameDetail =()=>{
                 </Stats>
 
                 <Media>
-                    <img src={game.background_image} alt={game.name}/>
+                    <img src={smallImage(game.background_image,1280)} alt={game.name}/>
                 </Media>
 
                 <Description>
@@ -52,7 +54,7 @@ const GameDetail =()=>{
 
                 <div className="gallery">
                     {screen.results.map(screen => (
-                        <img src={screen.image} key ={screen.image} alt={screen.id}/>
+                        <img src={smallImage(screen.image,1280)} key ={screen.image} alt={screen.id}/>
                     ))}
                 </div>
             </Detail>
