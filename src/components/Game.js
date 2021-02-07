@@ -16,7 +16,8 @@ const Game = ({ name, released, image, id }) => {
     document.body.style.overflow = "hidden";
     dispatch(loadDetail(id));
   };
-
+  //   console.log(name);
+  //   console.log(image);
   return (
     <StyledGame layoutId={stringPathId} onClick={loadDetailHandler}>
       <Link to={`/game/${id}`}>
