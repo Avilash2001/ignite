@@ -41,3 +41,7 @@ export const upcomingGamesUrl = () => `${base_url}${upcoming_games}`
 const new_games = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 export const newGamesUrl = () => `${base_url}${new_games}`
 
+//Game Details 
+export const gameDetailsUrl = (game_id) => `${base_url}games/${game_id}`;
+//Game Screenshots
+export const gameScreenShotUrl = (game_id) => `${base_url}games/${game_id}/screenshots`;
